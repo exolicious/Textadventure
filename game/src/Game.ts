@@ -9,7 +9,8 @@ namespace TextAdventure {
 
     constructor(_input: HTMLInputElement, _output: HTMLTextAreaElement) {
       this.console = MyConsole.getInstance(_input, _output);
-      /*this.isGameEnd = false;
+      this.isGameEnd = false;
+      /*
       this.fillWorldMap();
       //instantiate characters of each Room and push them into respective characters arrays
       this.fillRoomsWithCharacters();
@@ -20,7 +21,7 @@ namespace TextAdventure {
     public async main(): Promise<void> {
         while(!this.isGameEnd) {
           let playerInput = await this.console.getPlayerInput();
-          //inputController logic comes here
+          //outputController logic comes here
           if(playerInput == "quit") {
             this.isGameEnd = true;
           }
