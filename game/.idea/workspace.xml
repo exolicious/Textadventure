@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a8c6c7f3-bdf1-4ad6-8ab8-37fd46327042" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../concept/TextAdventure_ActivityDiagram.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../concept/TextAdventure_ActivityDiagram.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../concept/TextAdventure_ClassDiagram.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../concept/TextAdventure_ClassDiagram.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/game.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/src.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyConsole.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyConsole.ts" afterDir="false" />
-    </list>
+    <list default="true" id="a8c6c7f3-bdf1-4ad6-8ab8-37fd46327042" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,5 +42,8 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
