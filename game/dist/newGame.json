@@ -1,0 +1,174 @@
+{
+  "rooms": [
+    {
+      "id": 1,
+      "startRoom": true,
+      "name": "EntryRoom",
+      "description": "You see nothing. It is pitch black",
+      "items" : [
+        {
+          "name": "blue key",
+          "description": "A blue Key. Looks very valuable. Might come in handy later.",
+          "type": "key"
+        }
+      ],
+      "characters" : [
+        {
+          "name": "Hans",
+          "description": "Der Hans isch en echte Schwarzwälder",
+          "items" : [
+            {
+              "name": "blue key",
+              "description": "A blue Key. Looks very valuable. Might come in handy later.",
+              "type": "key"
+            }
+          ],
+          "type": "key"
+        }
+      ],
+      "adjacentRooms": [
+        {
+          "direction": "up",
+          "id": 2
+        },
+        {
+          "direction": "left",
+          "id": 3
+        },
+        {
+          "direction": "down",
+          "id": -1
+        },
+        {
+          "direction": "right",
+          "id": 4
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "startRoom": false,
+      "name": "NextRoom",
+      "description": "You see nothing. It is pitch black",
+      "items" : [
+        {
+          "name": "blue key",
+          "description": "A blue Key. Looks very valuable. Might come in handy later.",
+          "type": "key"
+        }
+      ],
+      "characters" : [
+        {
+          "name": "blue key",
+          "description": "A blue Key. Looks very valuable. Might come in handy later.",
+          "items" : [
+            {
+              "name": "blue key",
+              "description": "A blue Key. Looks very valuable. Might come in handy later.",
+              "type": "key"
+            }
+          ],
+          "type": "key"
+        }
+      ],
+      "adjacentRooms": [
+        {
+          "direction": "up",
+          "id": 1
+        },
+        {
+          "direction": "left",
+          "id": 1
+        },
+        {
+          "direction": "down",
+          "id": 1
+        },
+        {
+          "direction": "right",
+          "id": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "startRoom": false,
+      "name": "OtherRoom",
+      "description": "You see nothing. It is pitch black",
+      "items" : [
+      ],
+      "characters" : [
+        {
+          "name": "blue key",
+          "description": "A blue Key. Looks very valuable. Might come in handy later.",
+          "items" : [
+            {
+              "name": "blue key",
+              "description": "A blue Key. Looks very valuable. Might come in handy later.",
+              "type": "key"
+            }
+          ],
+          "type": "key"
+        }
+      ],
+      "adjacentRooms": [
+        {
+          "direction": "up",
+          "id": 1
+        },
+        {
+          "direction": "left",
+          "id": 1
+        },
+        {
+          "direction": "down",
+          "id": 1
+        },
+        {
+          "direction": "right",
+          "id": 1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "startRoom": false,
+      "name": "YetAnotherRoom",
+      "description": "You see nothing. It is pitch black",
+      "items" : [
+      ],
+      "characters" : [
+        {
+          "name": "Honk",
+          "description": "A devilish looking honk.",
+          "items" : [
+            {
+              "name": "Steel Pickaxe",
+              "description": "",
+              "type": "weapon"
+            }
+          ],
+          "type": "Enemy"
+        }
+      ],
+      "adjacentRooms": [
+        {
+          "direction": "up",
+          "id": 1
+        },
+        {
+          "direction": "left",
+          "id": 1
+        },
+        {
+          "direction": "down",
+          "id": 1
+        },
+        {
+          "direction": "right",
+          "id": 1
+        }
+      ]
+    }
+  ]
+}
