@@ -1,0 +1,1 @@
+{"version":3,"file":"Enemy.js","sourceRoot":"../src/","sources":["Enemy.ts"],"names":[],"mappings":"AACA,OAAO,EAAC,SAAS,EAAC,MAAM,gBAAgB,CAAC;AAGzC,MAAM,OAAO,KAAM,SAAQ,SAAS;IAMlC,YAAY,cAA8B;QACxC,KAAK,CAAC,cAAc,CAAC,CAAC;QAJjB,UAAK,GAAW,IAAI,KAAK,EAAQ,CAAC;IAKzC,CAAC;CAyBF"}

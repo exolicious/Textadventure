@@ -1,19 +1,18 @@
 import {Item} from './Item.js';
 import {ICharacterData} from './ICharacterData.js';
+import {ActionTarget} from "./ActionTarget.js";
 
-export class Character {
-  public name: string;
-  public description: string;
-  public items: Item[] = new Array<Item>();
+export class Character extends ActionTarget{
   public type: string;
+  public items: Item[] = new Array<Item>();
 
   constructor(_characterData: ICharacterData) {
-    this.name = _characterData.name;
-    this.description = _characterData.description;
+    super(_characterData.id, _characterData.name, _characterData.description);
+    this.type = _characterData.type;
     for(let itemData of _characterData.items) {
       this.items.push(new Item(itemData))
     }
-    this.type = _characterData.type;
+
   }
   /*
   public toString(): String {

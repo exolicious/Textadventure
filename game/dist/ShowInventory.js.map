@@ -1,0 +1,1 @@
+{"version":3,"file":"ShowInventory.js","sourceRoot":"../src/","sources":["ShowInventory.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,YAAY,EAAC,MAAM,mBAAmB,CAAC;AAE/C,MAAM,OAAO,aAAc,SAAQ,YAAY;IAC7C,8IAA8I;IAEvI,QAAQ;QACb,IAAI,CAAC,cAAc,CAAC,GAAG,CAAC,eAAe,CAAC,CAAC;IAC3C,CAAC;CAEF"}

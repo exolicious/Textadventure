@@ -1,11 +1,13 @@
 import { Sequence } from './Sequence.js';
 import { GameMap } from './GameMap.js';
 import { Room } from './Room.js';
+import { InputHandler } from "./InputHandler.js";
 export class GameSequence extends Sequence {
     /*__________________________________________________________________________________________________________________________________________*/
     constructor(_input, _output) {
         super(_input, _output);
-        this.isSqeuenceEnd = false;
+        this.availableActions = "commands(c), fight with(f with), look at (l at) {character} or {room},  ";
+        this.actionsStringArray = ["commands", "inventory", "fight with", "look at", "take item", "quit"];
         this.gameMap = new GameMap();
     }
     //idea for later: make path parameter, so that user can specify which save file he wants to load
@@ -13,22 +15,23 @@ export class GameSequence extends Sequence {
         const loadedMap = await this.loadJSON();
         console.log(loadedMap);
         this.fillWorldMap(loadedMap.rooms);
+        this.inputHandler = new InputHandler(this, this.actionsStringArray);
     }
-    async main() {
-        await this.console.typeWriteLog(this.currentRoom.toString());
-        this.console.consoleLog("commands (c), north (n), quit (q)");
-        while (!this.isSqeuenceEnd) {
-            await this.getUserAction();
-            await this.console.typeWriteLog(this.currentRoom.toString());
+    getSequenceIntroduction() {
+        let output = this.currentRoom.description;
+        if (this.currentRoom.characters.length > 0) {
+            output += "\rCharacters:\r";
+            for (let char of this.currentRoom.characters) {
+                output += char.name + "\r";
+            }
         }
-    }
-    async getUserAction() {
-        let playerInput = await this.console.getPlayerInput();
-        this.console.consoleLog(playerInput);
-        //inputController logic comes here
-        if (playerInput == "quit") {
-            this.isSqeuenceEnd = true;
+        if (this.currentRoom.items.length > 0) {
+            output += "\rItems:\r";
+            for (let item of this.currentRoom.items) {
+                output += item.name + "\r";
+            }
         }
+        return output;
     }
     async loadJSON() {
         let response = await fetch("./dist/newGame.json");

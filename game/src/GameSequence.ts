@@ -3,17 +3,17 @@ import {GameMap} from './GameMap.js';
 import {Room} from './Room.js';
 import {IGameData} from './IGameData.js';
 import {IRoomData} from './IRoomData.js';
+import {InputHandler} from "./InputHandler.js";
 
-export class GameSequence extends Sequence {
+export class GameSequence extends Sequence{
   // private characters: Character[];
   private gameMap: GameMap;
-  private currentRoom: Room;
-
   /*__________________________________________________________________________________________________________________________________________*/
 
   constructor(_input: HTMLInputElement, _output: HTMLTextAreaElement) {
     super(_input, _output);
-    this.isSqeuenceEnd = false;
+    this.availableActions = "commands(c), fight with(f with), look at (l at) {character} or {room},  "
+    this.actionsStringArray = ["commands", "inventory", "fight with", "look at", "take item", "quit"];
     this.gameMap = new GameMap();
   }
 
@@ -22,24 +22,24 @@ export class GameSequence extends Sequence {
     const loadedMap: IGameData = await this.loadJSON();
     console.log(loadedMap);
     this.fillWorldMap(loadedMap.rooms);
+    this.inputHandler = new InputHandler(this, this.actionsStringArray);
   }
 
-  public async main(): Promise<void> {
-    await this.console.typeWriteLog(this.currentRoom.toString());
-    this.console.consoleLog("commands (c), north (n), quit (q)");
-    while(!this.isSqeuenceEnd) {
-      await this.getUserAction();
-      await this.console.typeWriteLog(this.currentRoom.toString());
+  public getSequenceIntroduction(): string {
+    let output: string = this.currentRoom.description;
+    if(this.currentRoom.characters.length > 0) {
+      output += "\rCharacters:\r";
+      for(let char of this.currentRoom.characters) {
+        output += char.name + "\r";
+      }
     }
-  }
-
-  public async getUserAction(): Promise<void> {
-    let playerInput = await this.console.getPlayerInput();
-    this.console.consoleLog(playerInput);
-    //inputController logic comes here
-    if(playerInput == "quit") {
-      this.isSqeuenceEnd = true;
+    if(this.currentRoom.items.length > 0) {
+      output += "\rItems:\r";
+      for(let item of this.currentRoom.items) {
+        output += item.name + "\r";
+      }
     }
+    return output;
   }
 
   private async loadJSON(): Promise<IGameData> {

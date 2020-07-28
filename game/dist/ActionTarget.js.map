@@ -1,0 +1,1 @@
+{"version":3,"file":"ActionTarget.js","sourceRoot":"../src/","sources":["ActionTarget.ts"],"names":[],"mappings":"AAAA,MAAM,OAAgB,YAAY;IAKhC,8IAA8I;IAE9I,YAAsB,GAAW,EAAE,KAAa,EAAE,YAAoB;QACpE,IAAI,CAAC,EAAE,GAAG,GAAG,CAAC;QACd,IAAI,CAAC,IAAI,GAAG,KAAK,CAAC;QAClB,IAAI,CAAC,WAAW,GAAG,YAAY,CAAC;IAClC,CAAC;CACF"}

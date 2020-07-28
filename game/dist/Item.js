@@ -1,8 +1,8 @@
-export class Item {
+import { ActionTarget } from "./ActionTarget.js";
+export class Item extends ActionTarget {
     /*__________________________________________________________________________________________________________________________________________*/
     constructor(_itemData) {
-        this.name = _itemData.name;
-        this.description = _itemData.description;
+        super(_itemData.id, _itemData.name, _itemData.description);
         this.type = _itemData.type;
     }
 }

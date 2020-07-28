@@ -1,19 +1,19 @@
 import {Item} from './Item.js';
 import {Character} from './Character.js';
 import {IRoomData} from './IRoomData.js';
+import {ActionTarget} from './ActionTarget.js';
 
-export class Room {
+export class Room extends ActionTarget {
     public id: number;
-    public name: string;
-    public description: string;
-    public items: Item[] = new Array<Item>();
-    public characters: Character[] = new Array<Character>();
-    public adjacentRooms: Map<string, number> = new Map<string, number>();
+    public items: Item[];
+    public characters: Character[];
+    public adjacentRooms: Map<string,number>;
 
     constructor(_roomData: IRoomData) {
-        this.id = _roomData.id;
-        this.name = _roomData.name;
-        this.description = _roomData.description;
+        super(_roomData.id, _roomData.name, _roomData.description);
+        this.items = new Array<Item>();
+        this.characters = new Array<Character>();
+        this.adjacentRooms = new Map<string, number>();
         for (let itemData of _roomData.items) {
             this.items.push(new Item(itemData))
         }

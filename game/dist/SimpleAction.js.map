@@ -1,0 +1,1 @@
+{"version":3,"file":"SimpleAction.js","sourceRoot":"../src/","sources":["SimpleAction.ts"],"names":[],"mappings":"AAAA,OAAO,EAAC,MAAM,EAAC,MAAM,aAAa,CAAC;AAGnC,MAAM,OAAgB,YAAa,SAAQ,MAAM;IAC/C,8IAA8I;IAC9I,YAAY,eAAyB,EAAE,iBAAyB;QAC9D,KAAK,CAAC,eAAe,EAAE,iBAAiB,CAAC,CAAC;IAC5C,CAAC;CAIF"}
