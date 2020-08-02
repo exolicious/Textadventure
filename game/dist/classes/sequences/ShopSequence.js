@@ -21,7 +21,7 @@ export class ShopSequence extends Sequence {
     }
     async typeWriteSequenceIntroduction() {
         let output = this.shopKeeper.name + " " + this.shopKeeper.introduction;
-        MyConsole.consoleLog(output);
+        await MyConsole.typeWriteLog(output);
     }
     async logReocurringInfo() {
         await MyConsole.typeWriteLog(this.shopKeeper.inventory.toString(true));

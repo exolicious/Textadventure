@@ -25,7 +25,7 @@ export class PlayerInventorySequence extends Sequence {
   }
 
   public async typeWriteSequenceIntroduction(): Promise<void> {
-    MyConsole.consoleLog("You open your bag: \r")
+    await MyConsole.typeWriteLog("You open your bag: \r")
   }
 
   public logReocurringInfo(): void {

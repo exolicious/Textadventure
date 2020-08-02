@@ -32,8 +32,8 @@ export class MainMenuSequence extends Sequence {
         }
     }
     async typeWriteSequenceIntroduction() {
-        await MyConsole.consoleLog("Welcome to the awesome Textadventure! \r");
-        await MyConsole.consoleLog("If you ever want to know what your options are, you can always enter 'commands' down below to display them.\r");
+        await MyConsole.typeWriteLog("Welcome to the awesome Textadventure! \r");
+        await MyConsole.typeWriteLog("If you ever want to know what your options are, you can always enter 'commands' down below to display them.\r");
     }
     logReocurringInfo() {
     }

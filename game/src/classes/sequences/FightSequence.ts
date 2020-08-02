@@ -25,9 +25,9 @@ export class FightSequence extends Sequence {
 
   public async typeWriteSequenceIntroduction(): Promise<void> {
     if(this.enemyInitiatedFight)
-      MyConsole.consoleLog(this.enemy.name + " appearently does not want to talk to you...\r")
+      await MyConsole.typeWriteLog(this.enemy.name + " appearently does not want to talk to you...\r")
     else
-      MyConsole.consoleLog("You attack " + this.enemy.name + "\r");
+      await MyConsole.typeWriteLog("You attack " + this.enemy.name + "\r");
   }
 
   public logReocurringInfo(): void {

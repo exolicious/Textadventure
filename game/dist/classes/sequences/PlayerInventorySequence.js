@@ -21,7 +21,7 @@ export class PlayerInventorySequence extends Sequence {
         this.actions.push(new CloseSequence(this));
     }
     async typeWriteSequenceIntroduction() {
-        MyConsole.consoleLog("You open your bag: \r");
+        await MyConsole.typeWriteLog("You open your bag: \r");
     }
     logReocurringInfo() {
         MyConsole.consoleLog("Inventory: \r" + this.player.inventory.toString());

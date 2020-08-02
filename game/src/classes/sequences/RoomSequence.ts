@@ -34,7 +34,7 @@ export class RoomSequence extends Sequence {
   }
 
   public async typeWriteSequenceIntroduction(): Promise<void> {
-    await MyConsole.consoleLog(this.player.currentRoom.description + "\r");
+    await MyConsole.typeWriteLog(this.player.currentRoom.description + "\r");
   }
 
   public logReocurringInfo(): void {

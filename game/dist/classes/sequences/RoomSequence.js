@@ -30,7 +30,7 @@ export class RoomSequence extends Sequence {
         this.actions.push(new CloseSequence(this));
     }
     async typeWriteSequenceIntroduction() {
-        await MyConsole.consoleLog(this.player.currentRoom.description + "\r");
+        await MyConsole.typeWriteLog(this.player.currentRoom.description + "\r");
     }
     logReocurringInfo() {
         let output = this.player.currentRoom.name + ": \r";
