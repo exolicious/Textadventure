@@ -13,7 +13,13 @@
     //"outFile": "./dist/main.js", /*        Concatenate and emit output to single file. */
     "outDir": "./dist",
     /* Redirect output structure to the directory. */
-    "sourceRoot": "../src/",                /* der pfad, wo die source .ts files liegen, von dem OUTDIR PFAD AUS !!!!!!!!!!! */
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "*"
+      ]
+    },
+    //"sourceRoot": "../src/*",                /* der pfad, wo die source .ts files liegen, von dem OUTDIR PFAD AUS !!!!!!!!!!! */
     "rootDir": "./src/",                    /* Specify the root directory of input files. Use to control the output directory structure with --outDir. */
     // "composite": true, /*                     Enable project compilation */
     "removeComments": false, /*               Do not emit comments to output. */
@@ -57,6 +63,6 @@
     "skipLibCheck": true
   },
   "include": [
-    "./src/"
+    "./src/*"
   ]
 }

@@ -1,11 +1,6 @@
-import {GameSequence} from "./GameSequence.js";
+import {MainMenuSequence} from "./classes/sequences/MainMenuSequence.js";
 
-const inputElement: HTMLInputElement = <HTMLInputElement>document.getElementById('console__input');
-  const outputElement: HTMLTextAreaElement = <HTMLTextAreaElement>document.getElementById('console__output');
-
-  let game = new GameSequence(inputElement, outputElement);
+  let game: MainMenuSequence = MainMenuSequence.getInstance();
 //game.initialize().then(() => {
-  game.initializeState().then(() => {
-    game.main();
-  });
+  game.main();
 //})

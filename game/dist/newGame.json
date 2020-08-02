@@ -1,172 +1,412 @@
 {
+  "player": {
+    "type": "player",
+    "name": "You",
+    "description": "You haven´t looked at a mirror in a decade...",
+    "maxHealth": 20,
+    "baseDamage": 3,
+    "coins": 5,
+    "inventory" : [
+      {
+        "name": "Knife",
+        "type": "weapon",
+        "description": "A small knife, used for cooking",
+        "damageBoost": 2
+      },
+      {
+        "type": "potion",
+        "description": "A small vial with a weirdly gooey red substance. It smells good though."
+      }
+    ]
+  },
   "rooms": [
     {
+      "currentRoom": true,
       "id": 1,
-      "startRoom": true,
-      "name": "EntryRoom",
-      "description": "You see nothing. It is pitch black",
-      "items" : [
+      "locked": false,
+      "name": "Dark cave",
+      "description": "This place very dark, however you can see something shiny. It looks like some kind of vial. On the other side of the cave you can see a person in a knight´s armor laying on the floor, facing the cold rugged wall.",
+      "inventory" : [
         {
-          "name": "blue key",
-          "description": "A blue Key. Looks very valuable. Might come in handy later.",
-          "type": "key"
+          "name": "Normal Key",
+          "type": "key",
+          "description": "A little rusty...",
+          "roomId": 2
+        },
+        {
+          "name": "Shortsword",
+          "type": "weapon",
+          "description": "A knight´s longsword. It has been through many battles as the blade seems to be dull, however the balance is still good.",
+          "damageBoost": 4
         }
       ],
       "characters" : [
         {
-          "name": "Old knight",
-          "description": "He resembles an old friend of yours",
-          "items" : [
+          "id": 1,
+          "name": "Knight",
+          "type": "character",
+          "introduction": "You go over and try to talk to him... he doesn´t respond.. maybe he is asleep... As you try to grab his shoulder to wake him up, his head rolls right off to the floor",
+          "description": "A Person wearing a knight´s armor laying in the corner. Something seems wrong, maybe you can talk to him and find out what exactly it is.",
+          "inventory" : [
             {
-              "name": "blue key",
-              "description": "A blue Key. Looks very valuable. Might come in handy later.",
-              "type": "key"
+              "id": 4,
+              "type": "potion",
+              "description": "A blue Key. Looks very valuable. Might come in handy later."
             }
-          ],
-          "type": "key"
+          ]
         }
       ],
       "adjacentRooms": [
         {
-          "direction": "up",
+          "direction": "north",
           "id": 2
         },
         {
-          "direction": "left",
-          "id": 3
-        },
-        {
-          "direction": "down",
+          "direction": "east",
           "id": -1
         },
         {
-          "direction": "right",
+          "direction": "south",
+          "id": -1
+        },
+        {
+          "direction": "west",
+          "id": -1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Clearing",
+      "locked": false,
+      "description": "You leave the dark cave and as soon as you get outside your eyes need to adjust to the sudden change of brightness...You are in a clearing. There are a lot of trees around you\r You hear a weird sound from behind you, right above the cave entrance. As if some little girl is giggling.",
+      "inventory" : [
+      ],
+      "characters" : [
+        {
+          "id": 2,
+          "name": "Sketchy Man",
+          "type": "intelligentshopkeeper",
+          "description": "His laugh reminds you of a little kid´s, however he is at least twice as old as you.",
+          "introduction": " as he giggles, says he is a roaming 'businessman' and pulls out some kind of metal rods and wooden planks out of his bag (that looks way too small for what just came out of it), and presents to you his 'makeshift shop': \r",
+          "coins": 200000000,
+          "inventory" : [
+            {
+              "type": "potion",
+              "description": "A small vial with a weirdly gooey red substance. It smells good though."
+            }
+          ]
+        }
+      ],
+      "adjacentRooms": [
+        {
+          "direction": "north",
+          "id": 3
+        },
+        {
+          "direction": "east",
           "id": 4
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "startRoom": false,
-      "name": "NextRoom",
-      "description": "You see nothing. It is pitch black",
-      "items" : [
+        },
         {
-          "name": "blue key",
-          "description": "A blue Key. Looks very valuable. Might come in handy later.",
-          "type": "key"
-        }
-      ],
-      "characters" : [
-        {
-          "name": "blue key",
-          "description": "A blue Key. Looks very valuable. Might come in handy later.",
-          "items" : [
-            {
-              "name": "blue key",
-              "description": "A blue Key. Looks very valuable. Might come in handy later.",
-              "type": "key"
-            }
-          ],
-          "type": "key"
-        }
-      ],
-      "adjacentRooms": [
-        {
-          "direction": "up",
+          "direction": "south",
           "id": 1
         },
         {
-          "direction": "left",
-          "id": 1
-        },
-        {
-          "direction": "down",
-          "id": 1
-        },
-        {
-          "direction": "right",
-          "id": 1
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "startRoom": false,
-      "name": "OtherRoom",
-      "description": "You see nothing. It is pitch black",
-      "items" : [
-      ],
-      "characters" : [
-        {
-          "name": "blue key",
-          "description": "A blue Key. Looks very valuable. Might come in handy later.",
-          "items" : [
-            {
-              "name": "blue key",
-              "description": "A blue Key. Looks very valuable. Might come in handy later.",
-              "type": "key"
-            }
-          ],
-          "type": "key"
-        }
-      ],
-      "adjacentRooms": [
-        {
-          "direction": "up",
-          "id": 1
-        },
-        {
-          "direction": "left",
-          "id": 1
-        },
-        {
-          "direction": "down",
-          "id": 1
-        },
-        {
-          "direction": "right",
-          "id": 1
+          "direction": "west",
+          "id": -1
         }
       ]
     },
     {
       "id": 3,
-      "startRoom": false,
-      "name": "YetAnotherRoom",
-      "description": "You see nothing. It is pitch black",
-      "items" : [
+      "locked": false,
+      "name": "Woods",
+      "description": "You walk into the woods and hear a lot of birds chirping in the north and hear them scutter away.",
+      "inventory" : [
+      ],
+      "characters" : [
+      ],
+      "adjacentRooms": [
+        {
+          "direction": "north",
+          "id": 5
+        },
+        {
+          "direction": "east",
+          "id": -1
+        },
+        {
+          "direction": "south",
+          "id": 2
+        },
+        {
+          "direction": "west",
+          "id": -1
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "locked": false,
+      "name": "In Front of the cabin",
+      "description": "As you run a right through a bush, you see three goblins surrounding a little girl.",
+      "inventory" : [
+        {
+          "type": "potion",
+          "description": "A small vial with a weirdly gooey red substance. It smells good though."
+        }
       ],
       "characters" : [
         {
-          "name": "Honk",
-          "description": "A devilish looking honk.",
-          "items" : [
-            {
-              "name": "Steel Pickaxe",
-              "description": "",
-              "type": "weapon"
-            }
+          "name": "Little girl",
+          "type": "character",
+          "introduction": "'Thank you for helping me mister. These goblins knocked on the cabin door and even though my dad told me not to open the door, i did...they dragged me outside and now i can´t get back inside, since father took the only key with him', she says as she points to the east.",
+          "description": "A small girl, maybe 6 years old.",
+          "inventory": [
+          ]
+        },
+        {
+          "name": "Goblin",
+          "type": "enemy",
+          "baseDamage": 3,
+          "maxHealth": 7,
+          "introduction": "",
+          "inventory" : [
           ],
-          "type": "Enemy"
+          "description": "Ugly looking creature.",
+          "coins": 5
+        },
+        {
+          "name": "Goblin",
+          "type": "enemy",
+          "baseDamage": 3,
+          "maxHealth": 8,
+          "introduction": "",
+          "inventory" : [
+          ],
+          "description": "Ugly looking creature.",
+          "coins": 3
+        },
+        {
+          "name": "Goblin",
+          "type": "enemy",
+          "baseDamage": 3,
+          "maxHealth": 12,
+          "introduction": "",
+          "description": "Ugly looking creature.",
+          "coins": 2,
+          "inventory": [
+            {
+              "type": "weapon",
+              "name": "Club",
+              "descrption": "A crude club.",
+              "damageBoost": 3
+            }
+          ]
         }
       ],
       "adjacentRooms": [
         {
-          "direction": "up",
-          "id": 1
+          "direction": "north",
+          "id": -1
         },
         {
-          "direction": "left",
-          "id": 1
+          "direction": "east",
+          "id": 6
         },
         {
-          "direction": "down",
-          "id": 1
+          "direction": "south",
+          "id": 3
         },
         {
-          "direction": "right",
-          "id": 1
+          "direction": "west",
+          "id": -1
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "locked": false,
+      "name": "Cabin",
+      "description": "A cozy place... However if only she knew",
+      "inventory" : [
+        {
+          "type": "potion",
+          "description": "A small vial with a weirdly gooey red substance. It smells good though."
+        },
+        {
+          "name": "Skull key",
+          "type": "key",
+          "description": "Somehow this key... radiates danger...",
+          "roomId": 9
+        }
+      ],
+      "characters" : [
+      ],
+      "adjacentRooms": [
+        {
+          "direction": "north",
+          "id": -1
+        },
+        {
+          "direction": "east",
+          "id": -1
+        },
+        {
+          "direction": "south",
+          "id": -1
+        },
+        {
+          "direction": "west",
+          "id": 5
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "locked": false,
+      "name": "Bridge",
+      "description": "A long bridge leading to some kind of castle. There seems to be a laying on the bridge about halfway through.",
+      "inventory" : [
+        {
+          "type": "potion",
+          "description": "A small vial with a weirdly gooey red substance. It smells good though."
+        },
+        {
+          "type": "weapon",
+          "name": "Demon slayer",
+          "description": "The smith who crafted this sword must have been a master.",
+          "damageBoost": 12
+        }
+      ],
+      "characters" : [
+      ],
+      "adjacentRooms": [
+        {
+          "direction": "north",
+          "id": -1
+        },
+        {
+          "direction": "east",
+          "id": 7
+        },
+        {
+          "direction": "south",
+          "id": -1
+        },
+        {
+          "direction": "west",
+          "id": 2
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "locked": false,
+      "name": "Castle",
+      "description": "At the end of the bridge there is a huge castle.",
+      "inventory" : [
+      ],
+      "characters" : [
+      ],
+      "adjacentRooms": [
+        {
+          "direction": "north",
+          "id": -1
+        },
+        {
+          "direction": "east",
+          "id": 8
+        },
+        {
+          "direction": "south",
+          "id": -1
+        },
+        {
+          "direction": "west",
+          "id": 4
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "locked": false,
+      "name": "Corridor",
+      "description": "This Corridor seems pretty long.",
+      "inventory" : [
+      ],
+      "characters" : [
+      ],
+      "adjacentRooms": [
+        {
+          "direction": "north",
+          "id": -1
+        },
+        {
+          "direction": "east",
+          "id": 9
+        },
+        {
+          "direction": "south",
+          "id": -1
+        },
+        {
+          "direction": "west",
+          "id": 7
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "locked": true,
+      "name": "Throne Room",
+      "description": "As soon as you enter the throne room, you see a demon. It has long horns and skin as thick as stone.",
+      "inventory" : [
+      ],
+      "characters" : [
+        {
+          "name": "Demon",
+          "type": "intelligentenemy",
+          "maxHealth": 40,
+          "baseDamge": 4,
+          "inventory": [
+            {
+              "type": "weapon",
+              "name": "Demon Club",
+              "description": "A really heavy club.. actually on second sight it looks more lik another lesser demon´s skull fused with steel",
+              "damageBoost": 8
+            },
+            {
+              "type": "potion",
+              "description": "A small vial with a weirdly gooey red substance. It smells good though."
+            },
+            {
+              "type": "potion",
+              "description": "A small vial with a weirdly gooey red substance. It smells good though."
+            },
+            {
+              "type": "potion",
+              "description": "A small vial with a weirdly gooey red substance. It smells good though."
+            }
+          ]
+        }
+      ],
+      "adjacentRooms": [
+        {
+          "direction": "north",
+          "id": -1
+        },
+        {
+          "direction": "east",
+          "id": 10
+        },
+        {
+          "direction": "south",
+          "id": -1
+        },
+        {
+          "direction": "west",
+          "id": 8
         }
       ]
     }
